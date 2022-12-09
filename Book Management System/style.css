@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.form-control-dark {
+    border-color: var(--bs-gray);
+  }
+  .form-control-dark:focus {
+    border-color: #fff;
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+  }
+  
+  .text-small {
+    font-size: 85%;
+  }
+  
+  .dropdown-toggle {
+    outline: 0;
+  }
+
+
+  .container-strech-full{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .me-2-300{
+    width: 30em;
+  }
+  
+
+
+  .footer-margin-top{
+    margin-top: 10em;
+  }
+
+  .margin-margin-bottom{
+    margin-bottom: 50px;
+  }

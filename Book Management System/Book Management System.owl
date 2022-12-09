@@ -1,0 +1,188 @@
+@prefix : <http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem> .
+
+<http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem> rdf:type owl:Ontology ;
+                                                                            rdfs:comment "This is an ontology about Book Management System"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:domain :Book ;
+           rdfs:range :Publication .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#hasDescription
+:hasDescription rdf:type owl:ObjectProperty ;
+                rdfs:domain :Book ;
+                rdfs:range :Publication .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#authorName
+:authorName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Book ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Book ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#publicationDate
+:publicationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Book ;
+                 rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#publicationTitle
+:publicationTitle rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Book ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#publishedYear
+:publishedYear rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Book ;
+               rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Art
+:Art rdf:type owl:Class ;
+     rdfs:subClassOf :History .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Book
+:Book rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Comic
+:Comic rdf:type owl:Class ;
+       rdfs:subClassOf :Book .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Culture
+:Culture rdf:type owl:Class ;
+         rdfs:subClassOf :History .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#E-book
+:E-book rdf:type owl:Class ;
+        rdfs:subClassOf :Publication .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Elegy
+:Elegy rdf:type owl:Class ;
+       rdfs:subClassOf :Poetry .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Erotic
+:Erotic rdf:type owl:Class ;
+        rdfs:subClassOf :Romance .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Fantasy
+:Fantasy rdf:type owl:Class ;
+         rdfs:subClassOf :Romance .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Haiku
+:Haiku rdf:type owl:Class ;
+       rdfs:subClassOf :Poetry .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Hardcopy
+:Hardcopy rdf:type owl:Class ;
+          rdfs:subClassOf :Publication .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#History
+:History rdf:type owl:Class ;
+         rdfs:subClassOf :Book .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Humor
+:Humor rdf:type owl:Class ;
+       rdfs:subClassOf :Comic .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Non-fiction
+:Non-fiction rdf:type owl:Class ;
+             rdfs:subClassOf :Comic .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Paranormal
+:Paranormal rdf:type owl:Class ;
+            rdfs:subClassOf :Romance .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Poetry
+:Poetry rdf:type owl:Class ;
+        rdfs:subClassOf :Book .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Publication
+:Publication rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Romance
+:Romance rdf:type owl:Class ;
+         rdfs:subClassOf :Book .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Science
+:Science rdf:type owl:Class ;
+         rdfs:subClassOf :History .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Sonnet
+:Sonnet rdf:type owl:Class ;
+        rdfs:subClassOf :Poetry .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Superhero
+:Superhero rdf:type owl:Class ;
+           rdfs:subClassOf :Comic .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Burma_Chronic
+:Burma_Chronic rdf:type owl:NamedIndividual ;
+               :authorName "Guy Delisle"@en .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#My_Friend_Dahmer
+:My_Friend_Dahmer rdf:type owl:NamedIndividual ;
+                  :authorName "Derf Backderf"@en ;
+                  :publicationTitle "My Friend Dahmer"@en ;
+                  :publishedYear "2012"@en .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#They_Called_Us_Enemy
+:They_Called_Us_Enemy rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/nakam/ontologies/2022/11/BookManagementSystem#Fun_Home:_A_family_Tragicomic
+:Fun_Home:_A_family_Tragicomic rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
